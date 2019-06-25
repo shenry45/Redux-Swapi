@@ -20,7 +20,6 @@ export const fetchChars = () => dispatch => {
       type: FAILURE,
       payload: err.message
     }));
-  dispatch({ type: FETCHING, payload: false });
 };
 // the url to fetch characters from is `https://swapi.co/api/people/`
 // remember that now we have controll over our thunk-based action creator

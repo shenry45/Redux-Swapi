@@ -18,7 +18,13 @@ export const charsReducer = (state = initialState, action) => {
       })
 
     case SUCCESS:
-      return Object.assign( {}, state, {
+      /*return Object.assign( {}, state, {
+        characters: action.payload,
+        fetching: false
+      })*/
+
+      return ({
+        ...state,
         characters: action.payload,
         fetching: false
       })
@@ -28,6 +34,7 @@ export const charsReducer = (state = initialState, action) => {
         error: action.payload,
         fetching: false
       })
+
     default:
       return state;
   }

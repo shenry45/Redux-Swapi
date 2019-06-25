@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Loader from 'react-loader-spinner';
+import Loader from "react-loader-spinner";
 
 import { CharacterList } from "../components";
 // import actions
@@ -13,13 +13,13 @@ class CharacterListView extends React.Component {
 
   componentDidMount() {
     // call our action
-    this.props.fetchChars;
+    this.props.fetchChars();
   }
 
   render() {
     if (this.props.fetching) {
       // return something here to indicate that you are fetching data
-      <Loader type="Rings" color="#somecolor" height={80} width={80} />
+        <Loader type="Rings" color="#ff0000" height={80} width={80} />
     }
     return (
       <div className="CharactersList_wrapper">
